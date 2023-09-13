@@ -1,0 +1,143 @@
+/* TodoList.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  form {
+    width: 100%;
+    margin: 0px;
+  }
+
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px  5px;
+    margin: 10px 0;
+  }
+  
+ 
+  
+  .todo-text {
+    flex-grow: 1;
+    font-size: 18px;
+    padding-left:5px ;
+  }
+  
+  .delete-button {
+    background-color: #ff5757;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .delete-button:hover {
+    background-color: #e24949;
+  }
+  
+  .add-todo {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .add-todo input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .add-todo button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-todo button:hover {
+    background-color: #45a049;
+  }
+  
+ /* Container for the custom checkbox */
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius:5px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* When the custom checkbox is checked, change its appearance */
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+    background-color: #007bff;
+    border-color: #007bff;
+  
+}
+
+/* Checkmark symbol */
+.checkmark::before {
+    content: '\2713'; /* Unicode checkmark character */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show the checkmark when the custom checkbox is checked */
+.checkbox-container input[type="checkbox"]:checked + .checkmark::before {
+    opacity: 1;
+}
